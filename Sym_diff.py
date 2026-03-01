@@ -52,6 +52,6 @@ def poly_calc (poly_str):
     diff = differentiate(poly_list)
     return format_poly(diff)
 
-if __name__ == "__main__":
-    print(poly_calc("12x^2 + 3x + 5x^4 + 4"))
-    print(poly_calc("x^2 + 6x + 10"))
+
+print(poly_calc("12x^2 + 3x + 5x^4 + 4"))
+print(poly_calc("x^2 + 6x + 10"))
