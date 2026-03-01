@@ -1,15 +1,15 @@
-**Goal For Furture Drafts** : 
+## Goals For Furture Drafts: 
 * Handle polynomials with superscripts.
-* Handle polynomials with subtraction and multiplication as well 
+* Handle polynomials with subtraction and multiplication 
 
-### Quick Overview 
+## Quick Overview 
 The overall script is summarised in the last function called "poly_calc". 
 
 The function parses a polynomial string, into a list of tuples which is then differentiated and finally reformated back to a polynomial string after differentation. 
 
 As of now the script handles polynomials with addition only. 
 
-### Going Through the code Line by Line 
+## Going Through the code Line by Line 
 
 **parse_ploynomial(poly_str) function** turns a "human string" in standard format such as `12x^2 + 4` (no superscripts) into a computer friendly list of tuples to be used in the differentiation function. 
 
