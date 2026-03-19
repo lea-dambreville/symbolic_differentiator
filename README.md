@@ -10,7 +10,7 @@ As of now the script handles polynomials with addition only.
 
 ## Going Through the code Line by Line 
 
-**parse_superscript(poly_str) function** convertst any superscript in the input from '²' to the classic '^2'. 
+**parse_superscript(poly_str) function** converts any superscript in the input from '²' to the classic '^2'. 
 ```python
 def parse_supercript(poly_str):
     current_poly = poly_str
