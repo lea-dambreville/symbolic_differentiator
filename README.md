@@ -1,5 +1,4 @@
 ## Goals For Furture Drafts: 
-* Handle polynomials with superscripts.
 * Handle polynomials with subtraction and multiplication 
 
 ## Quick Overview 
@@ -10,6 +9,21 @@ The function parses a polynomial string, into a list of tuples which is then dif
 As of now the script handles polynomials with addition only. 
 
 ## Going Through the code Line by Line 
+
+**parse_superscript(poly_str) function** convertst any superscript in the input from '²' to the classic '^2'. 
+```python
+def parse_supercript(poly_str):
+    current_poly = poly_str
+    for num in poly_str:
+        if num in superscript_map:
+            current_poly = current_poly.replace(num, f"^{superscript_map[num]}") 
+    return current_poly
+```
+* `current_poly = poly_str` since python strings are immuatable (locked in memory), we need to create a working copy that is editable for our function to return
+* `for num in poly_str` we iterate through the string passed in 
+    * `if num in superscript_map` if the character we are iterating through `num` is a superscript character that can be found in our superscript_map dictionary then enter we enter the `if` block. 
+        * `current_poly = current_poly.replace(num, f"{superscript_map[num]}")`replace that superscript with its normal script i.e '²' -> '2' by finding it's value in our superscript_map dictionary.
+* `return current_poly` once the loop is finished we return the latest version of current_poly 
 
 **parse_ploynomial(poly_str) function** turns a "human string" in standard format such as `12x^2 + 4` (no superscripts) into a computer friendly list of tuples to be used in the differentiation function. 
 
